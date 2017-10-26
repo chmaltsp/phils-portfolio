@@ -68,13 +68,6 @@ export class Skills extends Component {
             );
           })}
         </List>
-        <List>
-          <Item>Docker</Item>
-          <Item>Redux</Item>
-          <Item>React Native</Item>
-          <Item>GraphQL</Item>
-          <Item>AWS</Item>
-        </List>
       </Wrapper>
     );
   }

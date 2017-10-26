@@ -3,11 +3,12 @@ import styled from 'styled-components';
 import { TransitionMotion, spring, presets } from 'react-motion';
 
 const Ball = styled.div`
-  height: 10px;
-  width: 10px;
+  height: 25px;
+  width: 25px;
   border-radius: 50%;
   position: absolute;
   transform: translate3d(0, 0, 0);
+  z-index: 5;
 `;
 
 const BallsContainer = styled.div`
@@ -59,7 +60,7 @@ class BallDrag extends PureComponent {
             key: `${index}`,
             style: {
               translateX: spring(prevStyles[index - 1].style.translateX, presets.noWobble),
-              translateY: spring(prevStyles[index - 1].style.translateY + 20, presets.noWobble)
+              translateY: spring(prevStyles[index - 1].style.translateY + 40, presets.noWobble)
             }
           };
     });

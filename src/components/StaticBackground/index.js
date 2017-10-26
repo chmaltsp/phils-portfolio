@@ -35,7 +35,7 @@ export class StaticBackground extends Component {
     });
   };
   render() {
-    const range = [150, 200]; // HSL Range
+    const range = [150, 170]; // HSL Range
     const colorNumber = this.state.scrollPercentage * (range[1] - range[0]) + range[0];
     return (
       <Background

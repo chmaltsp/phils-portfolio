@@ -8,6 +8,7 @@ export default injectGlobal`
    font-family: 'Halvetica Neue', Halvetica, sans-serif;
    font-size: 16px;
    color: #FFF;
+   cursor: none;
  }
 
 
