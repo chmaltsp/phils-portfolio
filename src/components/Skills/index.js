@@ -38,20 +38,22 @@ export class Skills extends Component {
 
     this.skillRefs = {};
     this.state = {};
+    this.onScroll = this.onScroll.bind(this);
   }
   componentDidMount() {
-    const scrollListener = event => {
-      Object.keys(this.skillRefs).forEach(skill => {
-        const element = this.skillRefs[skill];
+    window.addEventListener('scroll', this.onScroll);
+    this.onScroll();
+  }
 
-        this.setState({
-          ...this.state,
-          [skill]: isInViewport(element)
-        });
+  onScroll(event) {
+    Object.keys(this.skillRefs).forEach(skill => {
+      const element = this.skillRefs[skill];
+
+      this.setState({
+        ...this.state,
+        [skill]: isInViewport(element)
       });
-    };
-
-    window.addEventListener('scroll', scrollListener);
+    });
   }
   render() {
     return (
